@@ -1,10 +1,22 @@
 import { atom } from "recoil";
 
-export const userState = atom({
+export const authState = atom({
   key: "user",
   default: {
-    id: null,
+    // DB情報
+    id: "",
     name: "",
-    email: "",
+    picrure: "",
+    created_at: "",
+    // 認証情報
+    Token: "",
+    login_time: "",
+    refreshToken: "",
   },
 });
+/*
+id varchar(255) NOT NULL,
+  name varchar(255) NOT NULL,
+  picture text NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+*/
